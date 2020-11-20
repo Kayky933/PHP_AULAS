@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Exercício 1 13/10/2020</title>
+</head>
+
+<body>
+    <form action="php/linguagens2.php" method="post">
+        Nome: <input type="text" name="Dados[nome]" /><br />
+        Idade: <input type="text" name="Dados[idade]" /><br />
+        Curso: <br />
+        <select multiple name="Curso[]">
+            <option value="ADS">
+                Tecnologia em Análise e Desenvolvimento de Sistemas</option>
+            <option value="TAI">
+                Tecnologia em Automação Industrial</option>
+            <option value="LM">
+                Licenciatura em Matemática</option>
+        </select><br />
+       
+        Quais liguangens você conhece? </p>
+        <input type="checkbox" name="linguagens[]" value="php" />
+        PHP<br />
+        <input type="checkbox" name="linguagens[]" value="C" />
+        C<br />
+        <input type="checkbox" name="linguagens[]" value="Java" />
+        Java<br />
+        <input type="checkbox" name="linguagens[]" value="Python" />
+        Python </p>
+        <input type="submit" name="enviar" value="Enviar" />
+    </form>
+</body>
+
+</html>

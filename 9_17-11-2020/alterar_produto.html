@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/formulario2.0.css" rel="stylesheet" type="text/css" />
+    <title>Alterar Produto</title>
+</head>
+
+<body>
+    <div class="div-conteudo">
+        <div class="div-titulo">
+            <h1> Alterar Produto</h1>
+        </div>
+        <hr>
+        <div class="div-formulario">
+            <form action="php/altera_produto.php" method="POST" enctype="multipart/form-data">
+                <div class="bordadiv">
+                    <p class="titulo-form">Alterar Produto:</p>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="id">id:</label>
+                        <input type="text" name="txtid" onfocusout="ValidaTexto('id' , '')" id="id">
+                        <label class="erro" id="erroid"></label>
+                    </div>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="descricao">Descrição:</label>
+                        <input type="text" name="txtdescricao" onfocusout="ValidaTexto('Nodescricaome' , '')"
+                            id="descricao">
+                        <label class="erro" id="errodescricao"></label>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <div class="linha">
+                       <input class="Enviar Formulário" name="btncal" type="submit" value="Cadastrar">
+                       <input type="reset" value="Limpar Campos">
+                       <input type="button" value="Voltar" onclick="javascript: location.href='menu.html';" />
+                    </div>
+                 </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js\js.js"></script>

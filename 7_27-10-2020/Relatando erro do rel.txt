@@ -1,0 +1,6 @@
+Professora, nesse arquivo .rar tem o tal rel_usuario
+porém eu não usei ele, pois não funcionou para mim mesmo eu mudando a 
+string de conexão de dentro dele apontando para o meu banco de dados.
+A senhora poderia explicar para que serve esse rel, como ele funciona,
+tudo mais?
+Obrigado, tenha um bom dia

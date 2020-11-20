@@ -1,0 +1,5 @@
+﻿Descrição:JADE
+Unidade de medida:KG
+Peso:221
+Valor:1131
+

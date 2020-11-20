@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/formulario2.0.css" rel="stylesheet" type="text/css" />
+    <title>Cadastrar Produto</title>
+</head>
+<style>
+    .select {
+        width: 175px;
+        height: 20px;
+        padding-left: 60px;
+    }
+</style>
+
+<body>
+    <div class="div-conteudo">
+        <div class="div-titulo">
+            <h1> Cadastrat Produto</h1>
+        </div>
+        <hr>
+        <div class="div-formulario">
+            <form action="php/Efetuar_Cadastro_Produto.php" method="POST" enctype="multipart/form-data">
+                <div class="bordadiv">
+                    <p class="titulo-form">Dados Do Produto:</p>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Descricao">Descricao:</label>
+                        <input type="text" name="txtDescricao" onfocusout="ValidaTexto('Descricao' , '')"
+                            id="Descricao">
+                        <label class="erro" id="erroDescricao"></label>
+                    </div>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="txtMedida">Unidade de medida:</label>
+                        <select class="form-control select" name="txtUnidadeDeMedida" id="combo">
+                            <option value="Selecionar">Selecionar</option>
+                            <option value="KG">Quilograma</option>
+                            <option value="MG">Miligrama</option>
+                            <option value="L">Litro</option>
+                            <option value="ML">Mililitro</option>
+                        </select>
+                    </div>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Peso">Peso:</label>
+                        <input type="number" onfocusout="ValidaTexto('Peso', '')" name="txtPeso" id="Peso">
+                        <label class="erro" id="erroPeso"></label>
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Valor">Valor:</label>
+                        <input type="number" name="txtValor" onfocusout="ValidaTexto('Valor', '')" id="Valor">
+                        <label class="erro" id="erroValor"></label>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <div class="linha">
+                        <input class="Enviar Formulário" name="btncal" type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar Campos">
+                        <input type="button" value="Voltar" onclick="javascript: location.href='menu.html';" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="js\jquery.mask.js"></script>
+<script src="js\js.js"></script>

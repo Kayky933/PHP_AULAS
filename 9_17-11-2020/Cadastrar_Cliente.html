@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link href="css/reset.css" rel="stylesheet" type="text/css" />
+   <link href="css/formulario2.0.css" rel="stylesheet" type="text/css" />
+   <title>Cadastrar Cliente</title>
+</head>
+
+<body>
+   <div class="div-conteudo">
+      <div class="div-titulo">
+         <h1> Cadastrar Cliente</h1>
+      </div>
+      <hr>
+      <div class="div-formulario">
+         <form action="php/Efetuar_Cadastro_Cliente.php" method="POST" enctype="multipart/form-data">
+            <div class="bordadiv">
+               <p class="titulo-form">Dados Pessoais:</p>
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="Nome">Nome:</label>
+                  <input type="text" name="txtnome" onfocusout="ValidaTexto('Nome' , '')" id="Nome">
+                  <label class="erro" id="erroNome"></label>
+               </div>
+
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="Endereco">Endereço:</label>
+                  <input type="text" onfocusout="ValidaTexto('Endereco', '')" name="txtendereco" id="Endereco">
+                  <label class="erro" id="erroEndereco"></label>
+               </div>
+
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="Telefone">Telefone</label>
+                  <input type="text" class="form-control" data-mask="(00)00000-0000" id="Telefone" maxlength="15"
+                     name="txtTelefone" placeholder="(11)11111-1111">
+                  <label class="erro" id="erroTelefone"></label>
+               </div>
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="E-mail:">E-mail:</label>
+                  <input type="text" name="txtemail" id="Email" onfocusout="ValidaTexto('Email', '')">
+                  <label class="erro" id="erroEmail"></label>
+               </div>
+
+            </div>
+
+            <div class="botoes">
+               <div class="linha">
+                  <input class="Enviar Formulário" name="btncal" type="submit" value="Cadastrar">
+                  <input type="reset" value="Limpar Campos">
+                  <input type="button" value="Voltar" onclick="javascript: location.href='menu.html';" />
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+   crossorigin="anonymous"></script>
+<script src="js\jquery.mask.js"></script>
+<script src="js\js.js"></script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link href="css/reset.css" rel="stylesheet" type="text/css" />
+   <link href="css/formulario2.0.css" rel="stylesheet" type="text/css" />
+   <title>Cadastrar usuário</title>
+</head>
+
+<body>
+   <div class="div-conteudo">
+      <div class="div-titulo">
+         <h1> Cadastrat usuário</h1>
+      </div>
+      <hr>
+      <div class="div-formulario">
+         <form action="php/Efetuar_Cadastro.php" method="POST" enctype="multipart/form-data">
+            <div class="bordadiv">
+               <p class="titulo-form">Dados Pessoais:</p>
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="Nome">Nome:</label>
+                  <input type="text" name="txtnome" onfocusout="ValidaTexto('Nome' , '')" id="Nome">
+                  <label class="erro" id="erroNome"></label>
+               </div>
+
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="Senha">Senha:</label>
+                  <input type="password" onfocusout="ValidaTexto('Senha', '')" name="txtsenha" id="Senha">
+                  <label class="erro" id="erroSenha"></label>
+               </div>
+
+               <div class="linha">
+                  <label class="lbl-dadospessoais" for="perfil">Perfil:</label>
+                  <select class="form-control" name="txtperfil" id="combo">
+                     <option value="Administrador">Administrador</option>
+                     <option value="Usuario">Usuario</option>
+                  </select>
+               </div>
+            </div>
+
+            <div class="botoes">
+               <div class="linha">
+                  <input class="Enviar Formulário" name="btncal" type="submit" value="Cadastrar">
+                  <input type="reset" value="Limpar Campos">
+                  <input type="button" value="Voltar" onclick="javascript: location.href='menu.html';" />
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</body>
+
+</html>
+<script src="js\js.js"></script>

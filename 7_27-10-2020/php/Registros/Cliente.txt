@@ -1,0 +1,30 @@
+Nome:JO�O
+Endereço:RUA TAL
+Telefone:12312321321
+Email:jo�o1221@gmail.com
+
+Nome:JUBILEU
+Endereço:ASDADADSA
+Telefone:132131312321
+Email:sadsadsa@hotmail.com
+
+Nome:JULIANA
+Endereço:ASDASDASDASDSA
+Telefone:1221331233
+Email:juliana@hotmail.com
+
+Nome:JULIANA
+Endereço:ASDSADAS
+Telefone:12323213
+Email:juliana@gmail.com
+
+Nome:JEFERSON OLIVEIRA
+Endereço:JEF OLIVER
+Telefone:12313213456788
+Email:jesersonoliveira@hotmail.com
+
+Nome:MARCOS
+Endereço:RUA TREM B�O
+Telefone:(11)99667-2211
+Email:marcos@gmail.com
+

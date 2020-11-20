@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/formulario2.0.css" rel="stylesheet" type="text/css" />
+    <title>Cadastrar usuário</title>
+</head>
+<style>
+    .select {
+        width: 175px;
+        height: 20px;
+        padding-left: 60px;
+    }
+</style>
+
+<body>
+    <div class="div-conteudo">
+        <div class="div-titulo">
+            <h1> Cadastrat Fornecedor</h1>
+        </div>
+        <hr>
+        <div class="div-formulario">
+            <form action="php/Efetuar_Cadastro_Fornecedor.php" method="POST" enctype="multipart/form-data">
+
+                <p class="titulo-form">Dados Pessoais:</p>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Nome">Nome:</label>
+                    <input type="text" name="txtNome" onfocusout="ValidaTexto('Nome' , '')" id="Nome">
+                    <label class="erro" id="erroNome"></label>
+                </div>
+
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">Email:</label>
+                    <input type="text" onfocusout="ValidaTexto('Email', '')" name="txtEmail" id="Email">
+                    <label class="erro" id="erroEmail"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">Telefone:</label>
+                    <input type="text" onfocusout="ValidaTexto('Telefone', '')" data-mask="(00)00000-0000"
+                        name="txtTelefone" id="Telefone">
+                    <label class="erro" id="erroTelefone"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">Endereço:</label>
+                    <input type="text" onfocusout="ValidaTexto('Endereco', '')" name="txtEndereco" id="Endereco">
+                    <label class="erro" id="erroEndereco"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="txtEstado">Estado:</label>
+                    <select class="form-control select" name="txtEstado" id="combo">
+                        <option value="Selecionar">Selecionar</option>
+                        <option value="Acre">AC</option>
+                        <option value="Amazonas">AM</option>
+                        <option value="Roraima">RR</option>
+                        <option value="Rondônia">RO</option>
+                        <option value="Amapá">AP</option>
+                        <option value="Pará">PA</option>
+                        <option value="Mato Grosso">MT</option>
+                        <option value="Mato Grosso do Sul">MS</option>
+                        <option value="Goiás">GO</option>
+                        <option value="Tocantins">TO</option>
+                        <option value="Maranhão">MA</option>
+                        <option value="Piauí">PI</option>
+                        <option value="Ceará">CE</option>
+                        <option value="Rio Grande do Norte">RN</option>
+                        <option value="Paraíba">PB</option>
+                        <option value="Alagoas">AL</option>
+                        <option value="Sergipe">SE</option>
+                        <option value="Pernambuco">PE</option>
+                        <option value="Bahia">BA</option>
+                        <option value="Minas Gerais">MG</option>
+                        <option value="Espírito Santo">ES</option>
+                        <option value="Rio de Janeiro">RJ</option>
+                        <option value="São Paulo">SP</option>
+                        <option value="Paraná">PR</option>
+                        <option value="Santa Catarina">SC</option>
+                        <option value="Rio Grande do Sul">RS</option>
+                    </select>
+                </div>
+
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Cidade">Cidade:</label>
+                    <input type="text" onfocusout="ValidaTexto('Cidade', '')" name="txtCidade" id="Cidade">
+                    <label class="erro" id="erroCidade"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">CEP:</label>
+                    <input type="text" onfocusout="ValidaTexto('CEP', '')" data-mask="00000-00000" name="txtCEP"
+                        id="CEP">
+                    <label class="erro" id="erroCidade"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">Cargo:</label>
+                    <input type="text" onfocusout="ValidaTexto('Cargo', '')" name="txtCargo" id="Cargo">
+                    <label class="erro" id="erroCidade"></label>
+                </div>
+                <div class="linha">
+                    <label class="lbl-dadospessoais" for="Senha">Empresa:</label>
+                    <input type="text" onfocusout="ValidaTexto('Empresa', '')" name="txtEmpresa" id="Empresa">
+                    <label class="erro" id="erroCidade"></label>
+                </div>
+                <div class="botoes">
+                    <div class="linha">
+                        <input class="Enviar Formulário" name="btncal" type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar Campos">
+                        <input type="button" value="Voltar" onclick="javascript: location.href='menu.html';" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="js\jquery.mask.js"></script>
+<script src="js\js.js"></script>
