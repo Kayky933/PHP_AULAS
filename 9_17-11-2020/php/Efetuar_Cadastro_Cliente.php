@@ -1,6 +1,6 @@
 
 <?php
-include("conexao.php"); 
+include("conexao.php");
 
 //recebendo os dados
 $nome = FormatarMaiusculo($_POST['txtnome']);

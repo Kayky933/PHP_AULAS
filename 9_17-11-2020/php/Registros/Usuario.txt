@@ -1,8 +1,4 @@
-Nome:MARCOS AURÉLIO
-senha:1231231311313131
-Perfil:ADMINISTRADOR
-
-Nome:GALILEUA
-senha:dsadsadsadsa
+Nome:MARCOS AOTO
+senha:de2121e21e1e1e22e
 Perfil:ADMINISTRADOR
 

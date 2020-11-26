@@ -1,7 +1,7 @@
 <?php
 
 include("conexao.php");
- 
+
 //recebendo os dados
 $nome = FormatarMaiusculo($_POST['txtnome']);
 $senha = $_POST['txtsenha'];

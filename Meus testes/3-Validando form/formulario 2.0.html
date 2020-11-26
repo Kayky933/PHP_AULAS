@@ -1,0 +1,178 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+<link href="CSS/formulario2.0.css" rel="stylesheet" type="text/css" />
+
+<body>
+
+    <div class="div-conteudo">
+
+        <div class="div-titulo">
+            <h1> Formulário de Pré-Matrícula</h1>
+        </div>
+        <hr>
+
+        <div class="div-formulario">
+            <form action="php/ValidarForm.php" method="POST" enctype="multipart/form-data">
+                <div class="bordadiv">
+                    <p class="titulo-form">Dados Pessoais:</p>
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Nome do Aluno">Nome do Aluno:</label>
+                        <input type="text" name="NomeDoAluno" id="NomeAluno">
+                        <label class="erro" id="erroNomeAluno"></label>
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Nascimento">Nascimento (dd/mm/aaaa):</label>
+                        <input type="text" name="DiaNascimento" id="DiaNascimento" size="1">/
+                        <input type="text" name="MesNascimento" id="MesNascimento" size="1">/
+                        <input type="text" name="AnoNascimento" id="AnoNascimento" size="2">
+
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Nome da Mãe">Nome da Mãe:</label>
+                        <input type="text" name="NomeDaMae" id="NomeMae">
+                        <label class="erro" id="erroNomeMae"></label>
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Nome do Pai">Nome do Pai:</label>
+                        <input type="text" name="NomeDoPai" id="NomePai">
+                        <label class="erro" id="erroNomePai"></label>
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="Telefone">Telefone DDD:</label>
+                        (<input type="text" name="TelefoneDDD" id="TelefoneDDD" size="1">)
+                        Tel:<input type="text" name="NumeroTelefone" size="4">
+
+                        Ramal:<input type="text" name="Ramal" size="4"></label>
+                    </div>
+
+                    <div class="linha">
+                        <label class="lbl-dadospessoais" for="E-mail:">E-mail:</label>
+                        <input type="text" name="Email" id="Email">
+                        <label class="erro" id="erroEmail"></label>
+                    </div>
+                </div>
+                <div class="bordadiv">
+                    <p class="titulo-form">Informações da Matrícula:</p>
+                    <div class="linha">
+                        <div class="coluna28">
+                            <label for="Serie">Série:</label>
+                            <select multiple name="Serie[]">
+                                <option selected value="Pre-escola">Pré-escolar</option>
+                                <option value="EnsinoMedio">Ensino médio</option>
+                                <option value="EnsinoSuperior">Ensino superior</option>
+                            </select>
+                        </div>
+                        <div class="coluna15">
+                            <p> <label for="Turno">Turno:</label> </p>
+                            <input type="radio" name="turno" id="manha"> <label for="Manhã">Manhã</label>
+                            <p><input type="radio" name="turno" id="noite"> <label for="Tarde">Tarde</label></p>
+                        </div>
+                        <div class="coluna28">
+                            <h3>Atividades Extracurriculares:</h3>
+
+                            <input type="checkbox" id="Informações" name="vehicle1" value="Informática">
+                            <label for="vehicle1"> Informática</label><br>
+                            <input type="checkbox" id="Música" name="vehicle2" value="Música">
+                            <label for="vehicle2"> Música</label><br>
+                            <input type="checkbox" id="Balet" name="vehicle3" value="Balet">
+                            <label for="vehicle3"> Balet</label><br>
+                            <input type="checkbox" id="Pintura" name="vehicle1" value="Pintura">
+                            <label for="vehicle1"> Pintura</label><br>
+                            <input type="checkbox" id="Judô" name="vehicle2" value="Judô">
+                            <label for="vehicle2"> Judô</label><br>
+                            <input type="checkbox" id="Futebol" name="vehicle3" value="Futebol">
+                            <label for="vehicle3"> Futebol</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <div class="linha">
+                        <input class="Enviar Formulário" type="submit" value="Enviar Formulário">
+                        <input type="reset" value="Limpar Campos">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    /*
+    function valida() {
+        var retorno = true;
+
+        if (!ValidaTexto("NomeAluno", ""))
+            retorno = false;
+        if (!ValidaTexto("Email", ""))
+            retorno = false;
+        if (!ValidaTexto("NomeMae", ""))
+            retorno = false;
+        if (!ValidaTexto("NomePai", ""))
+            retorno = false;
+
+
+        return retorno;
+    }
+
+    function ValidaNascimento(campoidade, error) {
+        var dia = document.getElementById("DiaNascimento").value;
+        var mes = document.getElementById("MesNascimento").value;
+        var ano = document.getElementById("AnoNascimento").value;
+
+
+
+        var data = dia + "/" + mes + "/" + ano;
+
+        var reg = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+        if (data.match(reg)) {
+            alert("Input matched");
+        }
+        else {
+            alert("Please enter dd/mm/yyyy");
+        }
+
+        return true;
+    }
+
+    /*
+        function ValidaNome() {
+            var aluno = document.getElementById("NomeAluno").value;
+            
+            
+            if(aluno.length === 0 ){
+                document.getElementById("erroNomeAluno").innerHTML = "o nome é de preenchimento obrigatório !";
+                return false;
+            }else{
+                document.getElementById("erroNomeAluno").innerHTML = "";
+                return true;
+            }
+        }
+    */
+    /*
+    function ValidaTexto(nomeCampo, mensagem) {
+        var campo = document.getElementById(nomeCampo).value;
+
+        if (mensagem.length === 0)
+            mensagem = "O campo é obrigatório";
+
+        if (campo.length === 0) {
+            document.getElementById("erro" + nomeCampo).innerHTML = mensagem;
+            return false;
+        } else {
+            document.getElementById("erro" + nomeCampo).innerHTML = "";
+            return true;
+        }
+    }
+*/
+
+
+
+</script>
