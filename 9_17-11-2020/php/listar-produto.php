@@ -2,7 +2,7 @@
 //session_start();
 //incluindo o script de conexão
 include_once("conexao.php");
-?> 
+?>
 <?php
 //Buscando Dados de Usuários 
 	$sqlselect =  "select * from produtos order by ID ASC";

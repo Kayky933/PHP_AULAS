@@ -4,7 +4,7 @@
 include_once("conexao.php");
 ?>
 <?php
-//Buscando Dados de Usuários  
+//Buscando Dados de Usuários 
 	$sqlselect =  "select * from usuario order by ID ASC";
 	
 	// executando instrução SQL

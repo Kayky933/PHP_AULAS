@@ -3,7 +3,7 @@
 //incluindo o script de conexão
 include_once("conexao.php");
 ?>
-<?php 
+<?php
 //Buscando Dados de Usuários 
 $sqlselect =  "select * from fornecedor order by ID ASC";
 

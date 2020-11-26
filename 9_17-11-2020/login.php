@@ -33,7 +33,7 @@ include("php/logica-usuario.php");
                         //Passando sem colocar login e senha vai direto
                         if (efetuaLogin($conexao, $usuario, $senha)) {
                             logaUsuario($usuario);
-                            header("Location: menu.html");
+                            header("Location: index.html");
                         } else {
                             $usuario = $_POST['usuario'];
                             echo "<br><br>

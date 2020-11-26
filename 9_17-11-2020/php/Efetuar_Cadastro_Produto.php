@@ -1,14 +1,13 @@
 
 <?php
-include("conexao.php"); 
+include("conexao.php");
 
 //recebendo os dados
 $Descricao = FormatarMaiusculo($_POST['txtDescricao']);
 $Unidade_De_Medida = $_POST['txtUnidadeDeMedida'];
 $Peso = $_POST['txtPeso'];
 $Valor = $_POST['txtValor'];
-str_replace(",", ".", $Valor); 
-str_replace(",", ".", $Peso);
+
 
 $Dados = "Descrição:" . $Descricao . PHP_EOL . "Unidade de medida:" . $Unidade_De_Medida . PHP_EOL .
     "Peso:" . $Peso . PHP_EOL . "Valor:" . $Valor . PHP_EOL . PHP_EOL;

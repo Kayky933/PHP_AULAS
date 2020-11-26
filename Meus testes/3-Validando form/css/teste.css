@@ -1,0 +1,75 @@
+body{
+    background-color:darkgrey;
+}
+.linha{
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    float: left;
+    
+}
+.label-dados{
+    float: left;
+    width: 200px;
+    display: block;
+    text-align: right;
+    
+}
+#input-ddd{
+    width: 50px;
+}
+.info{
+    font-size: 30px;
+    text-align: center;
+}
+.dados{
+    font-weight:bold;
+    font-size: 18px;
+}
+.matricula{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.borda{
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+    height:280px;
+    width: 645px;
+    margin-left: 5px;
+    margin-top: 2px; 
+}
+.select-tamanho{
+    width: 110px;
+    
+}
+.botoes{
+    text-align: center;
+    margin-top: 10px;
+}
+.turno{
+    width:150px;
+    float:left;
+    height:200px;
+    margin-left: 100px;
+    
+}
+.container2{
+    margin-top: 10px;
+}
+.select{
+    float: left;
+   
+}
+.corpo{
+  width: 660px;
+  margin: 0 auto;
+  background-color: white;
+  height: 660px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+}

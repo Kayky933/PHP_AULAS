@@ -1,6 +1,7 @@
 <?php
 
-include("conexao.php"); 
+include("conexao.php");
+
 //recebendo os dados
 $nome = FormatarMaiusculo($_POST['txtNome']);
 $email = FormataMinusculo($_POST['txtEmail']);
@@ -9,7 +10,6 @@ $endereco = FormatarMaiusculo($_POST['txtEndereco']);
 $estado = FormatarMaiusculo($_POST['txtEstado']);
 $cidade = FormatarMaiusculo($_POST['txtCidade']);
 $cep = trim($_POST['txtCEP']);
-str_replace(",", ".", $cep);
 $cargo = FormatarMaiusculo($_POST['txtCargo']);
 $empresa = FormatarMaiusculo($_POST['txtEmpresa']);
 
@@ -52,7 +52,7 @@ function FormataMinusculo($minusculo)
 
 function ValidaFornecedor($nome, $email, $telefone, $endereco, $estado, $cidade, $cep, $cargo, $empresa)
 {
-    if (strlen($nome) <= 3 || strlen($email) <= 5 || strlen($telefone <= 0)) {
+    if (strlen($nome) <= 3 || strlen($email) <= 5 || strlen($telefone) <= 0) {
         return false;
     } else if (strlen($endereco) <= 0 || strlen($cidade) < 2 || strlen($cep) < 11) {
         return false;
